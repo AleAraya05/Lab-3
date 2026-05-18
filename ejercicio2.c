@@ -76,7 +76,36 @@ int tiene_columna_completa(int m[][SIZE]) {
 }
 
 
+
+void prints(int m[][SIZE]) {
+
+	if (es_identidad (m)) {
+		printf("Es matriz identidad: SI\n");
+
+	} else {
+		printf("Es matriz identidad: NO\n");
+	}
+
+
+	if (tiene_fila_completa(m)) {
+		printf("Tiene fila completa de unos: SI\n");
+
+	} else {
+		printf("Tiene fila completa de unos: NO\n");
+	}
+
+
+	if (tiene_columna_completa(m)) {
+		printf("Tiene columna completa de unos: SI\n");
+
+	} else {
+		printf("Tiene columna completa de unos: NO\n");
+	}
+}
+
+
 int main(void) {
+	srand(time(NULL));
 	int m[SIZE][SIZE] = {
 		{1, 0, 0, 0},
 		{0, 1, 0, 0},
@@ -84,7 +113,33 @@ int main(void) {
 		{0, 0, 0, 1}
 	};
 	/* Su implementacion */
+
+	printf("Matriz ingresada:\n");
+
+	for (int i = 0; i < SIZE; i++) {
+
+		for (int j = 0; j < SIZE; j++) {
+			printf("%d  ", m[i][j]);
+		}
+		printf("\n");
+	}
+
+	prints(m);
+
+	int r[SIZE][SIZE];
+
+	for (int i = 0; i < SIZE; i++) {
+
+		for (int j = 0; j <SIZE; j++) {
+
+			r[i][j] = rand() % 2;
+			printf("%d  ", r[i][j]);
+		}
+		printf("\n");
+	}
+
+	prints(r);
+
 	return 0;
 }
-
 
