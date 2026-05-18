@@ -1,0 +1,35 @@
+INICIO
+
+
+Funcion es_identidad(matriz) #con una matriz dada
+    i = 0
+    Para i en matriz: #i siendo la fila
+	Para j en matriz: #j siendo la columna
+	    Si i es diferente a j y matriz[i][j] es diferente a 0:
+	    	Retornar 0 #Falso
+	    Si i es igual a j y matriz[i][j] es diferente a 1:
+	    	Retornar 0 #Falso
+	    	
+    Retornar 1 #Verdadero
+
+
+Funcion contar_unos_fila (matriz, fila deseada )
+    contador = 0
+    Para j #columna en matriz:
+	Si matriz[fila deseada][j] es igual a 1:
+	    Contador +1
+    
+    Retornar contador
+    
+    
+Funcion tiene_fila_completa (matriz, contador en contar_unos_fila)
+    Para i #fila en matriz:
+    	Si contador es igual a tamano de matriz:
+    	    Retornar 1 #Verdadero
+
+    Retornar 0 #Falso
+    
+#Funciones de columnas igual a filas, invirtirndo los i's y j's.
+
+
+FIN
